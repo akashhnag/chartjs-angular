@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head>
+  <title>Admin Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="\js\admin.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="adminCtrl">
+
+<div class="container">
+    <h2>Enter Data</h2>
+  <div style="margin-top:2%;margin-bottom:2%;">       
+      Enter a year:
+      <input type="text" ng-model="yr">
+  </div>
+  
+            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Continent</th>
+        <th>Population</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Africa</td>
+        <td><input type="text" ng-model="afpop" ng-required="true"></td>
+        <td><button type="button" class="btn btn-primary" ng-click="subAf()">Submit</button></td>
+      </tr>
+      <tr>
+        <td>Asia</td>
+        
+        <td><input type="text" ng-model="aspop" ng-required="true"></td>
+        <td><button type="button" class="btn btn-primary" ng-click="subAs()">Submit</button></td>
+      </tr>
+      <tr>
+        <td>Europe</td>
+        
+        <td><input type="text" ng-model="eupop" ng-required="true"></td>
+        <td><button type="button" class="btn btn-primary" ng-click="subEu()">Submit</button></td>
+       </tr>
+       <tr>
+            <td>Latin America</td>
+           
+            <td><input type="text" ng-model="ltpop" ng-required="true"></td>
+            <td><button type="button" class="btn btn-primary" ng-click="subLt()">Submit</button></td>
+        </tr>
+        <tr>
+            <td>North America</td>
+            
+            <td><input type="text" ng-model="napop" ng-required="true"></td>
+            <td><button type="button" class="btn btn-primary" ng-click="subNa()">Submit</button></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

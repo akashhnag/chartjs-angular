@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>Charts with angular</title>
+        <meta charset="utf-8">
+          
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div ng-controller="mainCtrl" style="margin-bottom:5%;margin-top:5%">
+                        <h3>Enter year:</h3>                        
+                        <select >                                    
+                            <option ng-repeat="x in years" ng-click="sel(x)">{{x}}</option>
+                        </select>
+                    </div> 
+                </div>               
+            </div>
+            
+            <div class="row"  style="margin-bottom:10%">
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/bar.html'"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/doughnut.html'"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/pie.html'"></div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:10%">
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/radar.html'" style="width:100%;
+                    height:100%"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/polar.html'" style="width:100%;
+                    height:100%"></div>
+                </div>
+                <div class="col-sm-4">
+                    <div ng-controller="mainCtrl"  ng-include="'partials/horizontal-bar.html'" style="width:100%;
+                    height:100%"></div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:10%;">
+                <div class="col-sm-6">
+                    <div ng-controller="lineCtrl"  ng-include="'partials/line.html'" style="width:100%;
+                    height:100%"></div>
+                </div>
+                <div class="col-sm-6">
+                    <input type="checkbox" ng-model="africa">Africa<br>
+                    <input type="checkbox"  ng-model="asia">Asia<br>
+                    <input type="checkbox"  ng-model="europe">Europe<br>
+                    <input type="checkbox"  ng-model="latin">Latin America<br>
+                    <input type="checkbox"  ng-model="north">North America<br>
+                </div>                    
+            </div>    
+        </div>
+        
+
+        <!--javascript files-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   
+        <script src="/js/angular-charts.js"></script>
+        <script src="/js/Chart.min.js"></script>
+        <script src="/js/angular-chart/angular-chart.min.js"></script>
+    </body>
+</html>
